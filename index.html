@@ -3,40 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PokeDecked</title>
+    <title>PokeDecked - Home</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <h1>PokeDecked</h1>
+    <h1>PokeDecked - Pokémon List</h1>
 
-    <!-- Dropdown to select number of Pokémon per page -->
-    <div id="pokemon-options">
-        <label for="pokemon-count">Pokémon per page: </label>
-        <select id="pokemon-count">
-            <option value="10">10</option>
-            <option value="20">20</option>
-            <option value="50">50</option>
-            <option value="100">100</option>
-        </select>
+    <!-- Sort Buttons -->
+    <div class="sort-options">
+        <button id="sort-az" class="sort-button">Sort A-Z</button>
+        <button id="sort-id" class="sort-button">Sort by ID</button>
     </div>
 
-    <!-- Dropdown to sort Pokémon (A-Z or by ID) -->
-    <div id="sort-options">
-        <label for="sort-order">Sort by: </label>
-        <select id="sort-order">
-            <option value="name">A-Z</option>
-            <option value="id">ID</option>
-        </select>
-    </div>
-
+    <!-- Pokémon List -->
     <div id="pokemon" class="pokemon-list"></div>
 
-    <div id="pagination">
-        <button id="prev-btn">Previous</button>
-        <button id="next-btn">Next</button>
+    <!-- Pagination Controls -->
+    <div class="pagination">
+        <button id="prev-button">Previous</button>
+        <span id="page-number">Page 1</span>
+        <button id="next-button">Next</button>
     </div>
 
     <footer>
+        <button id="home-button" class="home-button">Home</button>
     </footer>
 
     <script src="js/script.js"></script>
