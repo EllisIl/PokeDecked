@@ -3,14 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PokeDecked</title>
+    <title>PokeDecked - Home</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <h1>PokeDecked</h1>
-    <div id="pokemon"></div>
-</body>
-<footer>
+    <h1>PokeDecked - Pokémon List</h1>
+
+    <!-- Sort Buttons -->
+    <div class="sort-options">
+        <button id="sort-az" class="sort-button">Sort A-Z</button>
+        <button id="sort-id" class="sort-button">Sort by ID</button>
+    </div>
+
+    <!-- Pokémon List -->
+    <div id="pokemon" class="pokemon-list"></div>
+
+    <!-- Pagination Controls -->
+    <div class="pagination">
+        <button id="prev-button">Previous</button>
+        <span id="page-number">Page 1</span>
+        <button id="next-button">Next</button>
+    </div>
+
+    <footer>
+        <button id="home-button" class="home-button">Home</button>
+    </footer>
+
     <script src="js/script.js"></script>
-</footer>
+</body>
 </html>
