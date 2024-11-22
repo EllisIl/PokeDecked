@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PokéDecked - Home</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="title">
+        <h1>PokéDecked - Pokémon List</h1>
+        <div class="navigation">
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="list.html">PokéList</a>
+                <a href="about.html">About</a>
+                <a href="game.html">Game</a>
+            </nav>
+        </div>
+    </header>
+    <section id="container">
+        <!-- Sort Buttons -->
+        <div class="sort-options">
+            <button id="sort-az" class="sort-button">Sort A-Z</button>
+            <button id="sort-id" class="sort-button">Sort by ID</button>
+        </div>
+
+        <!-- Pokémon List -->
+        <div id="pokemon" class="pokemon-list"></div>
+
+        <!-- Pagination Controls -->
+        <div class="pagination">
+            <button id="start-button">Beginning</button>
+            <button id="prev-button">Previous</button>
+            <span id="page-number">Page 1</span>
+            <button id="next-button">Next</button>
+            <button id="last-button">End</button>
+        </div>
+    </section>
+
+    <footer>
+        <script src="js/script.js"></script>
+    </footer>
+
+</body>
+</html>

@@ -58,10 +58,5 @@ function capitalize(str) {
     return str.charAt(0).toUpperCase() + str.slice(1);
 }
 
-// Handle back to home button
-document.getElementById('home-button').addEventListener('click', () => {
-    window.location.href = '/'; // Go back to the home page
-});
-
 // Fetch the Pokémon details
 fetchSinglePokemon(pokemonName);
