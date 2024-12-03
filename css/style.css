@@ -38,8 +38,11 @@ body {
 }
 
 .navigation{
-    padding-bottom: 10px;
+    padding: 10px;
     background-color: var(--primary-color);
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
 }
 
 .navigation a{
