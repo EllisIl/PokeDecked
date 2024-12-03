@@ -1,11 +1,76 @@
+:root {
+    --primary-color: #D63339;
+    --secondary-color: #339DA6;
+    --highlight-main-color: #f9c54e;
+    --highlight-secondary-color: #814a4c;
+    --highlight-tertiary-color: rgb(60, 60, 60);
+    --text-color: #404ES7;
+    --background-color: #f9f9f9;
+}
+
 /* General Styles */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f9f9f9;
-    color: #333;
+html, body {
+    height: 100%; /* Ensure both html and body take up full height */
     margin: 0;
     padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-image: url("/images/forest.jpg");
+    background-repeat: no-repeat;
+    background-color: var(--background-color);
+    background-size: cover; /* Cover the entire screen */
+    background-position: center; /* Center the image */
+    background-attachment: fixed; /* Make the background image fixed while scrolling */
+    color: var(--text-color);
+    height: 100%; /* Ensure body takes full height of the page */
     text-align: center;
+}
+
+
+
+/* home page */
+.title{
+    padding: 10px;
+    background-color: var(--primary-color);
+    color: var(--background-color);
+}
+
+.navigation{
+    padding-bottom: 10px;
+    background-color: var(--primary-color);
+}
+
+.navigation a{
+    justify-content: center;
+    padding: 20px;
+    text-decoration: none;
+    color: var(--background-color);
+}
+
+.sort-options button{
+    color: var(--background-color);
+    background-color: var(--secondary-color);
+    margin-top: 1em;
+    border-radius: 50px, 50px;
+}
+
+#container{
+    background-color: var(--highlight-tertiary-color);
+    border: var(--primary-color) 10px solid;
+    margin-top: 2em; 
+    width: 50%;
+    margin: 0 auto;
+}
+
+.pagination{
+    color: var(--background-color);
+    margin-bottom: 1em;
+}
+.pagination button{
+    color: var(--background-color);
+    background-color: var(--secondary-color);
 }
 
 /* Pokémon Container */
@@ -19,9 +84,9 @@ body {
 
 /* Individual Pokémon Card */
 #pokemon > div {
-    background: white;
+    background: var(--background-color);
     border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(var(--background-color), 0.1);
     padding: 15px;
     width: 200px;
     text-align: center;
@@ -76,7 +141,7 @@ body {
     padding: 20px;
     max-width: 800px;
     margin: 20px auto;
-    background: white;
+    background: var(--background-color);
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
@@ -105,24 +170,4 @@ body {
     font-size: 16px;
     color: #444;
     margin: 5px 0;
-}
-
-/* Home Button */
-.home-button {
-    position: fixed;
-    top: 10px;
-    left: 10px;
-    padding: 10px 20px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s ease;
-}
-
-.home-button:hover {
-    background-color: #45a049;
 }
