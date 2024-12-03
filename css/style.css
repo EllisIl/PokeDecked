@@ -57,12 +57,11 @@ body {
     border-radius: 50px, 50px;
 }
 
-#container{
+#container {
     background-color: var(--highlight-tertiary-color);
-    border: var(--primary-color) 10px solid;
-    margin-top: 2em; 
+    border: 10px solid var(--primary-color);
+    margin: 1em auto 0;
     width: 50%;
-    margin: 0 auto;
 }
 
 .pagination{
