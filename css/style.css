@@ -181,7 +181,7 @@ body {
     color: var(--background-color);
 }
 
-.list-prompt {
+.sort-button{
     background-color: var(--secondary-color);
     color: var(--background-color);
     border-radius: 25px;
@@ -190,7 +190,7 @@ body {
     border-color: var(--secondary-color);
 }
 
-.list-prompt:hover {
+.sort-button:hover {
     box-shadow: 10px 10px 15px var(--highlight-secondary-color);
     background-color: var(--darker-secondary-color);
 }
