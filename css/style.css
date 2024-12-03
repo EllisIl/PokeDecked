@@ -65,6 +65,9 @@ h2{
     width: 100%;
     display: flex;
     justify-content: space-around;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
 }
 
 .navigation a{
@@ -224,6 +227,7 @@ h2{
 }
 
 .sort-button{
+.sort-button{
     background-color: var(--secondary-color);
     color: var(--background-color);
     border-radius: 25px;
@@ -232,6 +236,7 @@ h2{
     border-color: var(--secondary-color);
 }
 
+.sort-button:hover {
 .sort-button:hover {
     box-shadow: 10px 10px 15px var(--highlight-secondary-color);
     background-color: var(--darker-secondary-color);
@@ -247,6 +252,36 @@ h2{
     color: var(--background-color);
 }
 
+/* Style for card packs */
+.card-pack {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    img {
+      margin: 0 10px;
+      width: 10rem;
+      height: auto;
+    }
+  }
+  /* Animation for card flipping */
+  .flip-animation {
+    animation: flip 1s forwards;
+  }
+
+  /* Keyframes for flip effect */
+  @keyframes flip {
+    0% {
+      transform: rotateY(0);
+    }
+    50% {
+      transform: rotateY(180deg);
+    }
+    100% {
+      transform: rotateY(360deg);
+    }
+  }
 /* Style for card packs */
 .card-pack {
     display: flex;
