@@ -84,7 +84,6 @@ function updatePagination() {
     prevButton.disabled = currentPage <= 1;
     nextButton.disabled = currentPage >= Math.ceil(allPokemons.length / pokemonsPerPage);
     const totalPages = Math.ceil(allPokemons.length / pokemonsPerPage);
-
     pageNumber.textContent = `Page ${currentPage} of ${totalPages}`;
 }
 // Handle page changes
