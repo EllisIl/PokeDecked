@@ -24,7 +24,7 @@ async function fetchAllPokemons() {
 function displayPokemonList(pokemons) {
     const pokemonContainer = document.getElementById("pokemon");
     pokemonContainer.innerHTML = ''; // Clear the container
-
+    
     // Sort Pokémon list if sorting by name or ID
     if (sortOrder === 'name') {
         pokemons.sort((a, b) => a.name.localeCompare(b.name)); // A-Z
