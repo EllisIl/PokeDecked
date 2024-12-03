@@ -24,7 +24,7 @@ async function fetchAllPokemons() {
 function displayPokemonList(pokemons) {
     const pokemonContainer = document.getElementById("pokemon");
     pokemonContainer.innerHTML = ''; // Clear the container
-
+    
     // Sort Pokémon list if sorting by name or ID
     if (sortOrder === 'name') {
         pokemons.sort((a, b) => a.name.localeCompare(b.name)); // A-Z
@@ -92,6 +92,11 @@ function handlePageChange(direction) {
         currentPage++;
     } else if (direction === 'prev') {
         currentPage--;
+    } else if (direction === 'start') {
+        currentPage=1;
+    } else if (direction === 'end') {
+        const totalPages = Math.ceil(allPokemons.length / pokemonsPerPage);
+        currentPage=totalPages;
     }
     displayPokemonList(allPokemons); // Re-render the Pokémon list after page change
     updatePagination(); // Update pagination buttons
@@ -108,9 +113,8 @@ function init() {
     // Pagination buttons
     document.getElementById('prev-button').addEventListener('click', () => handlePageChange('prev'));
     document.getElementById('next-button').addEventListener('click', () => handlePageChange('next'));
-
-    // Home button
-    document.getElementById('home-button').addEventListener('click', goHome);
+    document.getElementById('start-button').addEventListener('click', () => handlePageChange('start'));
+    document.getElementById('end-button').addEventListener('click',() => handlePageChange('end'));
 
     // Sort buttons
     document.getElementById('sort-az').addEventListener('click', () => handleSort('name'));
