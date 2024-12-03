@@ -116,9 +116,6 @@ function init() {
     document.getElementById('start-button').addEventListener('click', () => handlePageChange('start'));
     document.getElementById('end-button').addEventListener('click',() => handlePageChange('end'));
 
-    // Home button
-    document.getElementById('home-button').addEventListener('click', goHome);
-
     // Sort buttons
     document.getElementById('sort-az').addEventListener('click', () => handleSort('name'));
     document.getElementById('sort-id').addEventListener('click', () => handleSort('id'));
