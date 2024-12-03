@@ -1,6 +1,7 @@
 :root {
     --primary-color: #D63339;
     --secondary-color: #339DA6;
+    --darker-secondary-color: #174a4e;
     --highlight-main-color: #f9c54e;
     --highlight-secondary-color: #814a4c;
     --highlight-tertiary-color: rgb(60, 60, 60);
@@ -170,4 +171,36 @@ body {
     font-size: 16px;
     color: #444;
     margin: 5px 0;
+}
+
+/* About Page */
+
+.about{
+    top: 50%;
+    padding: 20px;
+    color: var(--background-color);
+}
+
+.list-prompt {
+    background-color: var(--secondary-color);
+    color: var(--background-color);
+    border-radius: 25px;
+    padding: 10px;
+    border-style: solid;
+    border-color: var(--secondary-color);
+}
+
+.list-prompt:hover {
+    box-shadow: 10px 10px 15px var(--highlight-secondary-color);
+    background-color: var(--darker-secondary-color);
+}
+
+#pokeapiLink, a:link {
+    text-decoration: none;
+    color: var(--background-color);
+}
+
+#pokeapiLink, a:visited {
+    text-decoration: none;
+    color: var(--background-color);
 }
