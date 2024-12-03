@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Recursive:slnt,wght,CASL,CRSV,MONO@-15..0,300..800,0..1,0..1,0..1&display=swap");
+
 :root {
     --primary-color: #D63339;
     --secondary-color: #339DA6;
@@ -7,6 +9,18 @@
     --highlight-tertiary-color: rgb(60, 60, 60);
     --text-color: #404ES7;
     --background-color: #f9f9f9;
+ /* typography */
+    --mono: "MONO" 0; 
+    --casl: "CASL" 0;
+    --wght: 300; 
+    --slnt: 0deg; 
+    --crsv: "CRSV" 0.5; 
+}
+
+* {
+    font-weight: var(--wght);
+    font-style: oblique var(--slnt);
+    font-variation-settings: var(--mono), var(--casl), var(--crsv);
 }
 
 /* General Styles */
@@ -17,7 +31,7 @@ html, body {
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: Recursive, sans-serif;
     background-image: url("/images/forest.jpg");
     background-repeat: no-repeat;
     background-color: var(--background-color);
@@ -38,8 +52,16 @@ body {
     color: var(--background-color);
 }
 
+h1{
+    --wght: 800;
+}
+
+h2{
+    --wght: 600;
+}
+
 .navigation{
-    padding: 10px;
+    padding-bottom: 20px;
     background-color: var(--primary-color);
     width: 100%;
     display: flex;
@@ -49,9 +71,27 @@ body {
 .navigation a{
     justify-content: center;
     padding: 20px;
+    --wght: 600;
     text-decoration: none;
     color: var(--background-color);
 }
+
+.navigation a:hover{
+    background-color: darkred;
+    border-radius: 40px;
+}
+
+.welcome-message{
+    margin: auto;
+    width: 50%;
+    padding: 2rem;
+    border-radius: 30px;
+    box-shadow: #333 5px;
+    background-color: var(--background-color);
+}
+
+
+
 
 .sort-options button{
     color: var(--background-color);
@@ -60,12 +100,11 @@ body {
     border-radius: 50px, 50px;
 }
 
-#container{
+#container {
     background-color: var(--highlight-tertiary-color);
-    border: var(--primary-color) 10px solid;
-    margin-top: 2em; 
+    border: 10px solid var(--primary-color);
+    margin: 1em auto 0;
     width: 50%;
-    margin: 0 auto;
 }
 
 .pagination{
