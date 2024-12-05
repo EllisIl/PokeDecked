@@ -109,6 +109,7 @@ h2{
     border: 10px solid var(--primary-color);
     margin: 1em auto 0;
     width: 50%;
+    max-width: 78%;
 }
 
 .pagination{
