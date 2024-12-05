@@ -10,7 +10,7 @@ document.getElementById('new-pack-button').addEventListener('click', generateNew
 
 function fetchPokemonCards() {
     const apiKey = '5fb62cb2-8e67-43e2-9d7f-5ea4ee5d10f7'; // Replace with your actual API key
-  const apiUrl = 'https://api.pokemontcg.io/v2/cards?pageSize=400'; // Fetch up to 100 cards
+  const apiUrl = 'https://api.pokemontcg.io/v2/cards'; // Fetch up to 100 cards
 
   setLoadingMessage(true); // Show loading message
 
