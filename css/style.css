@@ -185,6 +185,11 @@ h2{
     margin: 5px 0;
 }
 
+#page-number {
+    --wght: 800;
+    padding: 10px;
+}
+
 /* Single Pokémon View */
 .single-pokemon-view {
     display: flex;
