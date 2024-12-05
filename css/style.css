@@ -83,6 +83,13 @@ h2{
     border-radius: 40px;
 }
 
+.background-card{
+    width: 65%;
+    margin: auto;
+    padding: 10px;
+    background-color: var(--highlight-tertiary-color);
+}
+
 .welcome-message{
     margin: auto;
     width: 50%;
