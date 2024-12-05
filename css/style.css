@@ -78,9 +78,10 @@ h2{
     color: var(--background-color);
 }
 
-.navigation a:hover{
+.navigation a:hover {
     background-color: darkred;
     border-radius: 40px;
+    cursor: url('/images/pokeball32x31.png'), auto;
 }
 
 .background-card{
@@ -150,6 +151,7 @@ h2{
 #pokemon > div:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    cursor: url('/images/pokeball32x31.png'), auto;
 }
 
 /* Pokémon Image */
@@ -159,6 +161,10 @@ h2{
     object-fit: contain; /* Maintain image aspect ratio */
     margin: 10px auto;
     display: block;
+}
+
+#pokemon img:hover{
+    cursor: url('/images/pokeball32x31.png'), auto;
 }
 
 /* Pokémon Name */
@@ -183,6 +189,11 @@ h2{
 
 #pokemon ul li {
     margin: 5px 0;
+}
+
+#page-number {
+    --wght: 800;
+    padding: 10px;
 }
 
 /* Single Pokémon View */
