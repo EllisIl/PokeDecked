@@ -84,6 +84,12 @@ h2{
     cursor: url('/images/pokeball32x31.png'), auto;
 }
 
+.background-card{
+    width: 65%;
+    margin: auto;
+    padding: 10px;
+    background-color: var(--highlight-tertiary-color);
+}
 
 .welcome-message{
     margin: auto;
