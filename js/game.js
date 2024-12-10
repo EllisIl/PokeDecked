@@ -5,7 +5,6 @@ let currentCardIndex = 0; // Track the index of the current card being displayed
 let deck = []; // Store the 5-card deck
 let packContainer = document.getElementById('pack-container'); // Container to hold all packs
 
-document.getElementById('fetch-cards-button').addEventListener('click',displayCard);
 document.getElementById('new-pack-button').addEventListener('click', generateNewPack);
 
 function fetchPokemonCards() {
