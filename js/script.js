@@ -18,6 +18,15 @@ function handleSearch() {
         pokemon.name.toLowerCase().includes(query)
     );
     displayPokemonList(filteredPokemons); // Display filtered Pokémon
+    if (filteredPokemons == 0) {
+        const noResults = document.createElement('p');
+        noResults.textContent = "No Results. Please check your spelling and try again";
+        const divElement = document.getElementById('pokemon');
+        divElement.appendChild(noResults);
+        updatePagination();
+    } else {
+        updatePagination(); 
+    }
     updatePagination();
 }
 
