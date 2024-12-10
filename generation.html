@@ -9,7 +9,7 @@
 </head>
 <body>
     <header class="title">
-        <h1>PokéDecked - Pokémon List</h1>
+        <h1>PokéDecked - Pokémon Generations</h1>
         <div class="navigation">
             <nav>
                 <a href="index.html">Home</a>
@@ -21,28 +21,27 @@
         </div>
     </header>
     <section id="container">
+          <!-- Dropdown to select generation -->
+    <select id="generation-select">
+        <option value="generation-i">Generation I</option>
+        <option value="generation-ii">Generation II</option>
+        <option value="generation-iii">Generation III</option>
+        <option value="generation-iv">Generation IV</option>
+        <option value="generation-v">Generation V</option>
+        <option value="generation-vi">Generation VI</option>
+        <option value="generation-vii">Generation VII</option>
+        <option value="generation-viii">Generation VIII</option>
+      </select>
         <!-- Sort Buttons -->
         <div class="sort-options">
-            <input type="text" id="search-bar" placeholder="Search Pokémon..." />
-            <select id="type-filter">
-                <option value="">Filter by Type</option>
-                <option value="fire">Fire</option>
-                <option value="water">Water</option>
-                <option value="grass">Grass</option>
-                <option value="electric">Electric</option>
-                <option value="psychic">Psychic</option>
-                <option value="rock">Rock</option>
-                <option value="ground">Ground</option>
-                <option value="flying">Flying</option>
-            </select>
-        
             <button id="sort-az" class="sort-button">Sort A-Z</button>
             <button id="sort-id" class="sort-button">Sort by ID</button>
         </div>
-        
-
-        <!-- Pokémon List -->
-        <div id="pokemon" class="pokemon-list"></div>
+    
+      <!-- Section to display Pokémon names -->
+      <h2>Pokémon Species in Selected Generation:</h2>
+      <ul id="pokemon" class="pokemon-generation"></ul>
+       
 
         <!-- Pagination Controls -->
         <div class="pagination">
@@ -53,11 +52,11 @@
             <button id="end-button" class="sort-button">End</button>
         </div>
     </section>
-
-    <footer>
-        <p class="footer_info"> PokéDecked Copyright © 2024-<span id="year"></span> Luke Campbell, Elijah Foard, Andrew Mulert, Teirza Tippets</p>
-        <script src="js/script.js"></script>
-    </footer>
-
-</body>
+    
+   
+  
+    <!-- Link to external JS file -->
+    <script src="script.js"></script>
+    <script src="js/generation.js"></script>
+  </body>
 </html>
