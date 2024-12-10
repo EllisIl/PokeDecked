@@ -21,14 +21,27 @@
         </div>
     </header>
     <section id="container">
+          <!-- Dropdown to select generation -->
+    <select id="generation-select">
+        <option value="generation-i">Generation I</option>
+        <option value="generation-ii">Generation II</option>
+        <option value="generation-iii">Generation III</option>
+        <option value="generation-iv">Generation IV</option>
+        <option value="generation-v">Generation V</option>
+        <option value="generation-vi">Generation VI</option>
+        <option value="generation-vii">Generation VII</option>
+        <option value="generation-viii">Generation VIII</option>
+      </select>
         <!-- Sort Buttons -->
         <div class="sort-options">
             <button id="sort-az" class="sort-button">Sort A-Z</button>
             <button id="sort-id" class="sort-button">Sort by ID</button>
         </div>
-
-        <!-- Pokémon List -->
-        <div id="pokemon" class="pokemon-list"></div>
+    
+      <!-- Section to display Pokémon names -->
+      <h2>Pokémon Species in Selected Generation:</h2>
+      <ul id="pokemon" class="pokemon-generation"></ul>
+       
 
         <!-- Pagination Controls -->
         <div class="pagination">
@@ -39,10 +52,11 @@
             <button id="end-button" class="sort-button">End</button>
         </div>
     </section>
-
-    <footer>
-        <script src="js/script.js"></script>
-    </footer>
-
-</body>
+    
+   
+  
+    <!-- Link to external JS file -->
+    <script src="script.js"></script>
+    <script src="js/generation.js"></script>
+  </body>
 </html>
