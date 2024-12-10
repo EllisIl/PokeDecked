@@ -239,7 +239,7 @@ div > h1 {
 .single-pokemon-view h1 {
     font-size: 30px;
     margin: 10px 0;
-    color: #333;
+    color: var(--background-color);
 }
 
 .single-pokemon-view p {
