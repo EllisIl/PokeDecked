@@ -22,9 +22,23 @@
     <section id="container">
         <!-- Sort Buttons -->
         <div class="sort-options">
+            <input type="text" id="search-bar" placeholder="Search Pokémon..." />
+            <select id="type-filter">
+                <option value="">Filter by Type</option>
+                <option value="fire">Fire</option>
+                <option value="water">Water</option>
+                <option value="grass">Grass</option>
+                <option value="electric">Electric</option>
+                <option value="psychic">Psychic</option>
+                <option value="rock">Rock</option>
+                <option value="ground">Ground</option>
+                <option value="flying">Flying</option>
+            </select>
+        
             <button id="sort-az" class="sort-button">Sort A-Z</button>
             <button id="sort-id" class="sort-button">Sort by ID</button>
         </div>
+        
 
         <!-- Pokémon List -->
         <div id="pokemon" class="pokemon-list"></div>

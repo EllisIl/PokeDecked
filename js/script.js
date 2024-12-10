@@ -4,22 +4,51 @@ let pokemonsPerPage = 20;
 let allPokemons = [];
 let sortOrder = 'name'; // Default sort by name
 
+
+document.getElementById('search-bar').addEventListener('input', handleSearch);
+document.getElementById('type-filter').addEventListener('change', handleFilter);
+
 // Capitalize the first letter of a string
 function capitalize(str) {
     return str.charAt(0).toUpperCase() + str.slice(1);
 }
+function handleSearch() {
+    const query = document.getElementById('search-bar').value.toLowerCase();
+    const filteredPokemons = allPokemons.filter(pokemon => 
+        pokemon.name.toLowerCase().includes(query)
+    );
+    displayPokemonList(filteredPokemons); // Display filtered Pokémon
+    updatePagination();
+}
+
 // Fetch all Pokémon data
 async function fetchAllPokemons() {
     try {
-        const response = await fetch(`${api_url}?limit=1000`); // Fetch a large enough limit to cover all Pokémon
+        const response = await fetch(`${api_url}?limit=1000`);
         const data = await response.json();
-        allPokemons = data.results;
-        displayPokemonList(allPokemons); // Display the full list of Pokémon
+        allPokemons = await Promise.all(
+            data.results.map(async (pokemon) => {
+                const detailsResponse = await fetch(pokemon.url);
+                const details = await detailsResponse.json();
+                return { ...pokemon, types: details.types.map(t => t.type.name) };
+            })
+        );
+        displayPokemonList(allPokemons);
         updatePagination();
     } catch (err) {
         console.error(err);
     }
 }
+
+function handleFilter() {
+    const selectedType = document.getElementById('type-filter').value;
+    const filteredPokemons = selectedType
+        ? allPokemons.filter(pokemon => pokemon.types.includes(selectedType))
+        : allPokemons;
+    displayPokemonList(filteredPokemons); // Display filtered Pokémon
+    updatePagination();
+}
+
 // Display the Pokémon list based on sorting order
 function displayPokemonList(pokemons) {
     const pokemonContainer = document.getElementById("pokemon");

@@ -120,7 +120,7 @@ h2{
     background-color: var(--highlight-tertiary-color);
     border: 10px solid var(--primary-color);
     margin: 1em auto 0;
-    width: 50%;
+    width: 70%;
     max-width: 78%;
 }
 
@@ -135,49 +135,52 @@ h2{
 
 /* Pokémon Container */
 #pokemon {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive columns */
+    gap: 20px; /* Spacing between cards */
     padding: 20px;
+    justify-content: center; /* Align items horizontally */
+    align-items: start; /* Align items vertically */
+    width: 90%; /* Reduce width for better centering */
+    margin: 0 auto; /* Center the grid */
+    background-color: var(--highlight-tertiary-color);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 /* Individual Pokémon Card */
 #pokemon > div {
     background: var(--background-color);
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(var(--background-color), 0.1);
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 15px;
-    width: 200px;
     text-align: center;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
-    min-height: 300px; /* Prevent shrinking */
+    min-height: 320px; /* Prevent shrinking */
 }
 
-/* Pokémon Card Hover */
+/* Pokémon Card Hover Effect */
 #pokemon > div:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     cursor: url('/images/pokeball32x31.png'), auto;
 }
 
 /* Pokémon Image */
 #pokemon img {
     max-width: 100%;
-    height: 150px; /* Fixed height to maintain aspect ratio */
-    object-fit: contain; /* Maintain image aspect ratio */
+    height: 150px; /* Fixed height for consistent layout */
+    object-fit: contain; /* Preserve aspect ratio */
     margin: 10px auto;
     display: block;
-}
-
-#pokemon img:hover{
-    cursor: url('/images/pokeball32x31.png'), auto;
+    border-radius: 8px;
 }
 
 /* Pokémon Name */
 #pokemon h1 {
     font-size: 18px;
     margin: 10px 0;
+    color: var(--text-color);
 }
 
 /* Pokémon Details */
@@ -187,7 +190,6 @@ h2{
     text-align: left;
     line-height: 1.4;
 }
-
 /* Stats List */
 #pokemon ul {
     list-style-type: none;
