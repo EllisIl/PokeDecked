@@ -100,7 +100,13 @@ h2{
     background-color: var(--background-color);
 }
 
+/* Footer Style */
 
+.footer_info {
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    padding: 20px;
+}
 
 
 .sort-options button{
@@ -115,6 +121,7 @@ h2{
     border: 10px solid var(--primary-color);
     margin: 1em auto 0;
     width: 50%;
+    max-width: 78%;
 }
 
 .pagination{

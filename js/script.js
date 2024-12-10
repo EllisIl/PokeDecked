@@ -121,3 +121,5 @@ function init() {
     document.getElementById('sort-id').addEventListener('click', () => handleSort('id'));
 }
 init(); // Initialize the page on load
+
+year = document.querySelector("#year").textContent = new Date().getFullYear();
