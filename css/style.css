@@ -207,6 +207,10 @@ div > h1 {
     color: var(--background-color);
 }
 
+div > p {
+    color: var(--background-color);
+}
+
 /* Pokémon Image */
 #pokemon img {
     max-width: 100%;
