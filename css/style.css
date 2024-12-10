@@ -191,7 +191,7 @@ div > h1 {
 #pokemon h1 {
     font-size: 18px;
     margin: 10px 0;
-    color: var(--text-color);
+    color: var(--background-color);
 }
 
 /* Pokémon Details */
