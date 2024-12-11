@@ -22,21 +22,30 @@
     </header>
     <main class="background-card">
         <section class="cover-img">
-            <img src="" alt="pokeball" width="500px" height="500px">
+            <img src="images/pokeball.webp" alt="pokeball" width="500px" height="500px">
         </section>
         <section class="welcome-message">
             <h2>Welcome to PokéDecked!</h2>
             <div>
-                <p>With the handy use of a PokéAPI we bring a new way to access all types and your favorites to one place.
+                <p class="welcome">With the handy use of a PokéAPI we bring a new way to access all types and your favorites to one place.
                 Look around, each page has something to do. Whether it is the random three Pokémon below or the sorting page.
                 Want to put teams to the test? Play our game which randomizes a set of 5 cards and see if you win with your team!</p>
+                <div>
+                    <a href="list.html"><button class="sort-button">PokéList</button></a>
+                    <a href="game.html"><button class="sort-button">Game</button></a>
+                </div>
             </div>
+        </section>
+        <section class="random">
+            <h2>Random Pokémon of the Day:</h2>
+            <div id="pokemon-cards"></div>
         </section>
 
     </main>
     <footer>
         <p class="footer_info"> PokéDecked Copyright © 2024-<span id="year"></span> Luke Campbell, Elijah Foard, Andrew Mulert, Teirza Tippets</p>
         <script src="js/script.js"></script>
+        <script src="js/random-pokemon.js"></script>
     </footer>
 
 </body>
