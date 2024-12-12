@@ -89,18 +89,57 @@ h2{
 
 .background-card{
     width: 65%;
-    margin: auto;
+    margin: 1em auto 0;
     padding: 10px;
+    border-radius: 30px;
+    border: solid var(--primary-color) 10px;
     background-color: var(--highlight-tertiary-color);
 }
 
 .welcome-message{
     margin: auto;
-    width: 50%;
+    width: 60%;
     padding: 2rem;
     border-radius: 30px;
-    box-shadow: #333 5px;
     background-color: var(--background-color);
+}
+
+.welcome{
+    color: black;
+}
+
+.cover-img{
+    padding: 30px 20px;
+}
+
+.random{
+    margin: 1em auto;
+    width: 60%;
+    padding: 2rem;
+    border-radius: 30px;
+    background-color: var(--background-color);
+}
+
+#pokemon-cards{
+    display: flex;
+}
+.pokemon-card{
+    margin: 0.5em auto;
+    width: 30%;
+    padding: 2px;
+    border-radius: 30px;
+    border: var(--secondary-color) solid 5px;
+    background-color: var(--highlight-tertiary-color);
+}
+
+
+.pokemon-image{
+    width: 200px
+}
+
+.pokemon-name{
+    color: var(--background-color);
+    --wght:600;
 }
 
 /* Footer Style */
