@@ -439,9 +439,3 @@ div > p {
       transform: rotateY(360deg);
     }
 }
-
-footer {
-    position: fixed;
-    bottom: -16px;
-    width: 100%;
-}
