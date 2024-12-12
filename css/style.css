@@ -219,6 +219,13 @@ h2{
     margin: 2px;
 }
 
+.dropDown:hover {
+    box-shadow: 10px 10px 15px var(--highlight-secondary-color);
+    background-color: #174a4e;
+    border-color: #339DA6;
+    border-width: 2px;
+}
+
 .dropDown:focus-within {
     outline: none;
     border-color: var(--background-color);
