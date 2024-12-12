@@ -32,7 +32,7 @@ html, body {
 
 body {
     font-family: Recursive, sans-serif;
-    background-image: url("/images/forest.jpg");
+    background-image: url("images/forest.jpg");
     background-repeat: no-repeat;
     background-color: var(--background-color);
     background-size: cover; /* Cover the entire screen */
