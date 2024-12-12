@@ -28,10 +28,6 @@ generationSelect.addEventListener('change', async function() {
 // Function to display a single Pokémon's details
 async function displaySinglePokemon(pokemon) {
   try {
-    // Fetch the Pokémon details
-    const pokemonResponse = await fetch(pokemon.url);
-    const pokemonData = await pokemonResponse.json();
-
     // Capitalize name and fetch the Pokémon image
     const name = capitalize(pokemon.name);
     const pokeLink = document.createElement('a');
