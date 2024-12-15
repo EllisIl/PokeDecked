@@ -9,7 +9,7 @@ let sortOrder = 'name'; // Default sort by name
 // Fetch Pokémon species for the selected generation and display each Pokémon
 generationSelect.addEventListener('change', async function () {
   const generationName = generationSelect.value;
-  const url = `https://pokeapi.co/api/v2/generation/${generationName}/`;
+  const url = `https://pokeapi.co/api/v2/generation/${generationName}/`; 
 
   try {
     const response = await fetch(url);
@@ -94,28 +94,30 @@ async function displaySinglePokemon(pokemon) {
 }
 
 function updatePagination() {
-  const prevButton = document.getElementById('prev-button');
-  const nextButton = document.getElementById('next-button');
-  const pageNumber = document.getElementById('page-number');
+    const prevButton = document.getElementById('prev-button');
+    const nextButton = document.getElementById('next-button');
+    const pageNumber = document.getElementById('page-number');
 
-  const totalPages = Math.ceil(allPokemons.length / pokemonsPerPage);
-
-  prevButton.disabled = currentPage <= 1;
-  nextButton.disabled = currentPage >= totalPages;
-
-  pageNumber.textContent = `Page ${currentPage} of ${totalPages}`;
+    prevButton.disabled = currentPage <= 1;
+    nextButton.disabled = currentPage >= Math.ceil(allPokemons.length / pokemonsPerPage);
+    const totalPages = Math.ceil(allPokemons.length / pokemonsPerPage);
+    pageNumber.textContent = `Page ${currentPage} of ${totalPages}`;
 }
-
+// Handle page changes
 function handlePageChange(direction) {
-  if (direction === 'next' && currentPage < Math.ceil(allPokemons.length / pokemonsPerPage)) {
-    currentPage++;
-  } else if (direction === 'prev' && currentPage > 1) {
-    currentPage--;
-  }
-  displayPokemonList(allPokemons);
-  updatePagination();
+    if (direction === 'next') {
+        currentPage++;
+    } else if (direction === 'prev') {
+        currentPage--;
+    } else if (direction === 'start') {
+        currentPage=1;
+    } else if (direction === 'end') {
+        const totalPages = Math.ceil(allPokemons.length / pokemonsPerPage);
+        currentPage=totalPages;
+    }
+    displayPokemonList(allPokemons); // Re-render the Pokémon list after page change
+    updatePagination(); // Update pagination buttons
 }
-
 // Sort buttons
 document.getElementById('sort-az').addEventListener('click', () => {
   sortOrder = 'name'; // Sort by name

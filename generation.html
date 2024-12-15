@@ -20,43 +20,43 @@
             </nav>
         </div>
     </header>
-    <section id="container">
-          <!-- Dropdown to select generation -->
-        <!-- Sort Buttons -->
-        <div class="sort-options">
-            <select class="dropDown" id="generation-select">
-                <option value="generation-i">Generation I</option>
-                <option value="generation-ii">Generation II</option>
-                <option value="generation-iii">Generation III</option>
-                <option value="generation-iv">Generation IV</option>
-                <option value="generation-v">Generation V</option>
-                <option value="generation-vi">Generation VI</option>
-                <option value="generation-vii">Generation VII</option>
-                <option value="generation-viii">Generation VIII</option>
-            </select>
-            <button id="sort-az" class="sort-button">Sort A-Z</button>
-            <button id="sort-id" class="sort-button">Sort by ID</button>
-        </div>
-    
-      <!-- Section to display Pokémon names -->
-      <h2>Pokémon Species in Selected Generation:</h2>
-      <ul id="pokemon" class="pokemon-generation"></ul>
-       
+    <main>
+        <section id="container">
+            <!-- Dropdown to select generation -->
+            <!-- Sort Buttons -->
+            <div class="sort-options">
+                <select class="dropDown" id="generation-select">
+                    <option value="generation-i">Generation I</option>
+                    <option value="generation-ii">Generation II</option>
+                    <option value="generation-iii">Generation III</option>
+                    <option value="generation-iv">Generation IV</option>
+                    <option value="generation-v">Generation V</option>
+                    <option value="generation-vi">Generation VI</option>
+                    <option value="generation-vii">Generation VII</option>
+                    <option value="generation-viii">Generation VIII</option>
+                </select>
+                <button id="sort-az" class="sort-button">Sort A-Z</button>
+                <button id="sort-id" class="sort-button">Sort by ID</button>
+            </div>
+        
+        <!-- Section to display Pokémon names -->
+        <h2>Pokémon Species in Selected Generation:</h2>
+        <ul id="pokemon" class="pokemon-generation"></ul>
+        
 
-        <!-- Pagination Controls -->
-        <div class="pagination">
-            <button id="start-button" class="sort-button">Start</button>
-            <button id="prev-button" class="sort-button">Previous</button>
-            <span id="page-number">Page 1</span>
-            <button id="next-button" class="sort-button">Next</button>
-            <button id="end-button" class="sort-button">End</button>
-        </div>
-    </section>
-    
-   
-  
-    <!-- Link to external JS file -->
-
-    <script src="js/generation.js"></script>
+            <!-- Pagination Controls -->
+            <div class="pagination">
+                <button id="start-button" class="sort-button">Start</button>
+                <button id="prev-button" class="sort-button">Previous</button>
+                <span id="page-number">Page 1</span>
+                <button id="next-button" class="sort-button">Next</button>
+                <button id="end-button" class="sort-button">End</button>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p class="footer_info"> PokéDecked Copyright © 2024-<span id="year"></span> Luke Campbell, Elijah Foard, Andrew Mulert, Teirza Tippets</p>
+        <script src="js/generation.js"></script>
+    </footer>
   </body>
 </html>
